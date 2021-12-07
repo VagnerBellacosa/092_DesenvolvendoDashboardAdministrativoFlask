@@ -1,0 +1,243 @@
+Bem vindo a documentação do Flask. Esta documentação está dividida em diferentes partes. Eu recomento que você inicie com a [*Instalação*](https://flask-ptbr.readthedocs.io/en/latest/installation.html#installation) e então sim passe para o [*Quickstart*](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#quickstart). Além do início rápido, tem também o [*Tutorial*](https://flask-ptbr.readthedocs.io/en/latest/tutorial/index.html#tutorial) mais detalhado, que mostra como criar uma aplicação completa (embora pequena) com Flask. Se você preferir pode também, pode mergulhar no Flask, lendo a documentação da [*API*](https://flask-ptbr.readthedocs.io/en/latest/api.html#api) interna. Os padrões mais comuns estão detalhados na parte de [*Patterns for Flask*](https://flask-ptbr.readthedocs.io/en/latest/patterns/index.html#patterns).
+
+O Flask depende de duas bibliotecas externas: o motor de template [Jinja2](http://jinja.pocoo.org/2/) e o conjunto de ferramentas WSGI [Werkzeug](http://werkzeug.pocoo.org/) . Estas bibliotecas não estão documentadas aqui. Se você quer ver suas documentações veja os links abaixo:
+
+- [Documentação Jinja2](http://jinja.pocoo.org/2/documentation/)
+- [Documentação Werkzeug](http://werkzeug.pocoo.org/documentation/)
+
+## Guia do Usuário
+
+Esta parte da documentação, que é na maior parte em prosa, inicia com algumas informações básicas sobre Flask, em seguida, concentra-se em passo-a-passo e instruções para desenvolvimento web com Flask.
+
+- Prefácio
+  - [Qual o significado de “micro” ?](https://flask-ptbr.readthedocs.io/en/latest/foreword.html#qual-o-significado-de-micro)
+  - [Configuração e Convenções](https://flask-ptbr.readthedocs.io/en/latest/foreword.html#configuracao-e-convencoes)
+  - [Crescendo com Flask](https://flask-ptbr.readthedocs.io/en/latest/foreword.html#crescendo-com-flask)
+- Foreword for Experienced Programmers
+  - [Thread-Locals in Flask](https://flask-ptbr.readthedocs.io/en/latest/advanced_foreword.html#thread-locals-in-flask)
+  - [Develop for the Web with Caution](https://flask-ptbr.readthedocs.io/en/latest/advanced_foreword.html#develop-for-the-web-with-caution)
+  - [The Status of Python 3](https://flask-ptbr.readthedocs.io/en/latest/advanced_foreword.html#the-status-of-python-3)
+- Instalação
+  - [virtualenv](https://flask-ptbr.readthedocs.io/en/latest/installation.html#virtualenv)
+  - [Instalação no Sistema](https://flask-ptbr.readthedocs.io/en/latest/installation.html#instalacao-no-sistema)
+  - [Vivendo no Limite](https://flask-ptbr.readthedocs.io/en/latest/installation.html#vivendo-no-limite)
+  - [pip e distribute no Windows](https://flask-ptbr.readthedocs.io/en/latest/installation.html#pip-e-distribute-no-windows)
+- Quickstart
+  - [A Minimal Application](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#a-minimal-application)
+  - [Debug Mode](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#debug-mode)
+  - [Routing](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#routing)
+  - [Static Files](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#static-files)
+  - [Rendering Templates](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#rendering-templates)
+  - [Accessing Request Data](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#accessing-request-data)
+  - [Redirects and Errors](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#redirects-and-errors)
+  - [About Responses](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#about-responses)
+  - [Sessions](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#sessions)
+  - [Message Flashing](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#message-flashing)
+  - [Logging](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#logging)
+  - [Hooking in WSGI Middlewares](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#hooking-in-wsgi-middlewares)
+  - [Deploying to a Web Server](https://flask-ptbr.readthedocs.io/en/latest/quickstart.html#deploying-to-a-web-server)
+- Tutorial
+  - [Introducing Flaskr](https://flask-ptbr.readthedocs.io/en/latest/tutorial/introduction.html)
+  - [Step 0: Creating The Folders](https://flask-ptbr.readthedocs.io/en/latest/tutorial/folders.html)
+  - [Step 1: Database Schema](https://flask-ptbr.readthedocs.io/en/latest/tutorial/schema.html)
+  - [Step 2: Application Setup Code](https://flask-ptbr.readthedocs.io/en/latest/tutorial/setup.html)
+  - [Step 3: Creating The Database](https://flask-ptbr.readthedocs.io/en/latest/tutorial/dbinit.html)
+  - [Step 4: Request Database Connections](https://flask-ptbr.readthedocs.io/en/latest/tutorial/dbcon.html)
+  - [Step 5: The View Functions](https://flask-ptbr.readthedocs.io/en/latest/tutorial/views.html)
+  - [Step 6: The Templates](https://flask-ptbr.readthedocs.io/en/latest/tutorial/templates.html)
+  - [Step 7: Adding Style](https://flask-ptbr.readthedocs.io/en/latest/tutorial/css.html)
+  - [Bonus: Testing the Application](https://flask-ptbr.readthedocs.io/en/latest/tutorial/testing.html)
+- Templates
+  - [Jinja Setup](https://flask-ptbr.readthedocs.io/en/latest/templating.html#jinja-setup)
+  - [Standard Context](https://flask-ptbr.readthedocs.io/en/latest/templating.html#standard-context)
+  - [Standard Filters](https://flask-ptbr.readthedocs.io/en/latest/templating.html#standard-filters)
+  - [Controlling Autoescaping](https://flask-ptbr.readthedocs.io/en/latest/templating.html#controlling-autoescaping)
+  - [Registering Filters](https://flask-ptbr.readthedocs.io/en/latest/templating.html#registering-filters)
+  - [Context Processors](https://flask-ptbr.readthedocs.io/en/latest/templating.html#context-processors)
+- Testing Flask Applications
+  - [The Application](https://flask-ptbr.readthedocs.io/en/latest/testing.html#the-application)
+  - [The Testing Skeleton](https://flask-ptbr.readthedocs.io/en/latest/testing.html#the-testing-skeleton)
+  - [The First Test](https://flask-ptbr.readthedocs.io/en/latest/testing.html#the-first-test)
+  - [Logging In and Out](https://flask-ptbr.readthedocs.io/en/latest/testing.html#logging-in-and-out)
+  - [Test Adding Messages](https://flask-ptbr.readthedocs.io/en/latest/testing.html#test-adding-messages)
+  - [Other Testing Tricks](https://flask-ptbr.readthedocs.io/en/latest/testing.html#other-testing-tricks)
+  - [Keeping the Context Around](https://flask-ptbr.readthedocs.io/en/latest/testing.html#keeping-the-context-around)
+  - [Accessing and Modifying Sessions](https://flask-ptbr.readthedocs.io/en/latest/testing.html#accessing-and-modifying-sessions)
+- Logging Application Errors
+  - [Error Mails](https://flask-ptbr.readthedocs.io/en/latest/errorhandling.html#error-mails)
+  - [Logging to a File](https://flask-ptbr.readthedocs.io/en/latest/errorhandling.html#logging-to-a-file)
+  - [Controlling the Log Format](https://flask-ptbr.readthedocs.io/en/latest/errorhandling.html#controlling-the-log-format)
+  - [Other Libraries](https://flask-ptbr.readthedocs.io/en/latest/errorhandling.html#other-libraries)
+- Debugging Application Errors
+  - [When in Doubt, Run Manually](https://flask-ptbr.readthedocs.io/en/latest/errorhandling.html#when-in-doubt-run-manually)
+  - [Working with Debuggers](https://flask-ptbr.readthedocs.io/en/latest/errorhandling.html#working-with-debuggers)
+- Configuration Handling
+  - [Configuration Basics](https://flask-ptbr.readthedocs.io/en/latest/config.html#configuration-basics)
+  - [Builtin Configuration Values](https://flask-ptbr.readthedocs.io/en/latest/config.html#builtin-configuration-values)
+  - [Configuring from Files](https://flask-ptbr.readthedocs.io/en/latest/config.html#configuring-from-files)
+  - [Configuration Best Practices](https://flask-ptbr.readthedocs.io/en/latest/config.html#configuration-best-practices)
+  - [Development / Production](https://flask-ptbr.readthedocs.io/en/latest/config.html#development-production)
+  - [Instance Folders](https://flask-ptbr.readthedocs.io/en/latest/config.html#instance-folders)
+- Signals
+  - [Subscribing to Signals](https://flask-ptbr.readthedocs.io/en/latest/signals.html#subscribing-to-signals)
+  - [Creating Signals](https://flask-ptbr.readthedocs.io/en/latest/signals.html#creating-signals)
+  - [Sending Signals](https://flask-ptbr.readthedocs.io/en/latest/signals.html#sending-signals)
+  - [Signals and Flask’s Request Context](https://flask-ptbr.readthedocs.io/en/latest/signals.html#signals-and-flask-s-request-context)
+  - [Decorator Based Signal Subscriptions](https://flask-ptbr.readthedocs.io/en/latest/signals.html#decorator-based-signal-subscriptions)
+  - [Core Signals](https://flask-ptbr.readthedocs.io/en/latest/signals.html#core-signals)
+- Pluggable Views
+  - [Basic Principle](https://flask-ptbr.readthedocs.io/en/latest/views.html#basic-principle)
+  - [Method Hints](https://flask-ptbr.readthedocs.io/en/latest/views.html#method-hints)
+  - [Method Based Dispatching](https://flask-ptbr.readthedocs.io/en/latest/views.html#method-based-dispatching)
+  - [Decorating Views](https://flask-ptbr.readthedocs.io/en/latest/views.html#decorating-views)
+  - [Method Views for APIs](https://flask-ptbr.readthedocs.io/en/latest/views.html#method-views-for-apis)
+- The Application Context
+  - [Purpose of the Application Context](https://flask-ptbr.readthedocs.io/en/latest/appcontext.html#purpose-of-the-application-context)
+  - [Creating an Application Context](https://flask-ptbr.readthedocs.io/en/latest/appcontext.html#creating-an-application-context)
+  - [Locality of the Context](https://flask-ptbr.readthedocs.io/en/latest/appcontext.html#locality-of-the-context)
+  - [Context Usage](https://flask-ptbr.readthedocs.io/en/latest/appcontext.html#context-usage)
+- The Request Context
+  - [Diving into Context Locals](https://flask-ptbr.readthedocs.io/en/latest/reqcontext.html#diving-into-context-locals)
+  - [How the Context Works](https://flask-ptbr.readthedocs.io/en/latest/reqcontext.html#how-the-context-works)
+  - [Callbacks and Errors](https://flask-ptbr.readthedocs.io/en/latest/reqcontext.html#callbacks-and-errors)
+  - [Teardown Callbacks](https://flask-ptbr.readthedocs.io/en/latest/reqcontext.html#teardown-callbacks)
+  - [Notes On Proxies](https://flask-ptbr.readthedocs.io/en/latest/reqcontext.html#notes-on-proxies)
+  - [Context Preservation on Error](https://flask-ptbr.readthedocs.io/en/latest/reqcontext.html#context-preservation-on-error)
+- Modular Applications with Blueprints
+  - [Why Blueprints?](https://flask-ptbr.readthedocs.io/en/latest/blueprints.html#why-blueprints)
+  - [The Concept of Blueprints](https://flask-ptbr.readthedocs.io/en/latest/blueprints.html#the-concept-of-blueprints)
+  - [My First Blueprint](https://flask-ptbr.readthedocs.io/en/latest/blueprints.html#my-first-blueprint)
+  - [Registering Blueprints](https://flask-ptbr.readthedocs.io/en/latest/blueprints.html#registering-blueprints)
+  - [Blueprint Resources](https://flask-ptbr.readthedocs.io/en/latest/blueprints.html#blueprint-resources)
+  - [Building URLs](https://flask-ptbr.readthedocs.io/en/latest/blueprints.html#building-urls)
+- Flask Extensions
+  - [Finding Extensions](https://flask-ptbr.readthedocs.io/en/latest/extensions.html#finding-extensions)
+  - [Using Extensions](https://flask-ptbr.readthedocs.io/en/latest/extensions.html#using-extensions)
+  - [Flask Before 0.8](https://flask-ptbr.readthedocs.io/en/latest/extensions.html#flask-before-0-8)
+- Working with the Shell
+  - [Creating a Request Context](https://flask-ptbr.readthedocs.io/en/latest/shell.html#creating-a-request-context)
+  - [Firing Before/After Request](https://flask-ptbr.readthedocs.io/en/latest/shell.html#firing-before-after-request)
+  - [Further Improving the Shell Experience](https://flask-ptbr.readthedocs.io/en/latest/shell.html#further-improving-the-shell-experience)
+- Patterns for Flask
+  - [Larger Applications](https://flask-ptbr.readthedocs.io/en/latest/patterns/packages.html)
+  - [Application Factories](https://flask-ptbr.readthedocs.io/en/latest/patterns/appfactories.html)
+  - [Application Dispatching](https://flask-ptbr.readthedocs.io/en/latest/patterns/appdispatch.html)
+  - [Using URL Processors](https://flask-ptbr.readthedocs.io/en/latest/patterns/urlprocessors.html)
+  - [Deploying with Distribute](https://flask-ptbr.readthedocs.io/en/latest/patterns/distribute.html)
+  - [Deploying with Fabric](https://flask-ptbr.readthedocs.io/en/latest/patterns/fabric.html)
+  - [Using SQLite 3 with Flask](https://flask-ptbr.readthedocs.io/en/latest/patterns/sqlite3.html)
+  - [SQLAlchemy in Flask](https://flask-ptbr.readthedocs.io/en/latest/patterns/sqlalchemy.html)
+  - [Uploading Files](https://flask-ptbr.readthedocs.io/en/latest/patterns/fileuploads.html)
+  - [Caching](https://flask-ptbr.readthedocs.io/en/latest/patterns/caching.html)
+  - [View Decorators](https://flask-ptbr.readthedocs.io/en/latest/patterns/viewdecorators.html)
+  - [Form Validation with WTForms](https://flask-ptbr.readthedocs.io/en/latest/patterns/wtforms.html)
+  - [Template Inheritance](https://flask-ptbr.readthedocs.io/en/latest/patterns/templateinheritance.html)
+  - [Message Flashing](https://flask-ptbr.readthedocs.io/en/latest/patterns/flashing.html)
+  - [AJAX with jQuery](https://flask-ptbr.readthedocs.io/en/latest/patterns/jquery.html)
+  - [Custom Error Pages](https://flask-ptbr.readthedocs.io/en/latest/patterns/errorpages.html)
+  - [Lazily Loading Views](https://flask-ptbr.readthedocs.io/en/latest/patterns/lazyloading.html)
+  - [MongoKit in Flask](https://flask-ptbr.readthedocs.io/en/latest/patterns/mongokit.html)
+  - [Adding a favicon](https://flask-ptbr.readthedocs.io/en/latest/patterns/favicon.html)
+  - [Streaming Contents](https://flask-ptbr.readthedocs.io/en/latest/patterns/streaming.html)
+  - [Deferred Request Callbacks](https://flask-ptbr.readthedocs.io/en/latest/patterns/deferredcallbacks.html)
+  - [Adding HTTP Method Overrides](https://flask-ptbr.readthedocs.io/en/latest/patterns/methodoverrides.html)
+  - [Request Content Checksums](https://flask-ptbr.readthedocs.io/en/latest/patterns/requestchecksum.html)
+  - [Celery Based Background Tasks](https://flask-ptbr.readthedocs.io/en/latest/patterns/celery.html)
+- Deployment Options
+  - [mod_wsgi (Apache)](https://flask-ptbr.readthedocs.io/en/latest/deploying/mod_wsgi.html)
+  - [Standalone WSGI Containers](https://flask-ptbr.readthedocs.io/en/latest/deploying/wsgi-standalone.html)
+  - [uWSGI](https://flask-ptbr.readthedocs.io/en/latest/deploying/uwsgi.html)
+  - [FastCGI](https://flask-ptbr.readthedocs.io/en/latest/deploying/fastcgi.html)
+  - [CGI](https://flask-ptbr.readthedocs.io/en/latest/deploying/cgi.html)
+- Becoming Big
+  - [Read the Source.](https://flask-ptbr.readthedocs.io/en/latest/becomingbig.html#read-the-source)
+  - [Hook. Extend.](https://flask-ptbr.readthedocs.io/en/latest/becomingbig.html#hook-extend)
+  - [Subclass.](https://flask-ptbr.readthedocs.io/en/latest/becomingbig.html#subclass)
+  - [Wrap with middleware.](https://flask-ptbr.readthedocs.io/en/latest/becomingbig.html#wrap-with-middleware)
+  - [Fork.](https://flask-ptbr.readthedocs.io/en/latest/becomingbig.html#fork)
+  - [Scale like a pro.](https://flask-ptbr.readthedocs.io/en/latest/becomingbig.html#scale-like-a-pro)
+  - [Discuss with the community.](https://flask-ptbr.readthedocs.io/en/latest/becomingbig.html#discuss-with-the-community)
+
+## Referência da API
+
+Se você está procurando informações sobre uma função específica, classe ou método, esta parte da documentação é para você.
+
+- API
+  - [Application Object](https://flask-ptbr.readthedocs.io/en/latest/api.html#application-object)
+  - [Blueprint Objects](https://flask-ptbr.readthedocs.io/en/latest/api.html#blueprint-objects)
+  - [Incoming Request Data](https://flask-ptbr.readthedocs.io/en/latest/api.html#incoming-request-data)
+  - [Response Objects](https://flask-ptbr.readthedocs.io/en/latest/api.html#response-objects)
+  - [Sessions](https://flask-ptbr.readthedocs.io/en/latest/api.html#sessions)
+  - [Session Interface](https://flask-ptbr.readthedocs.io/en/latest/api.html#session-interface)
+  - [Test Client](https://flask-ptbr.readthedocs.io/en/latest/api.html#test-client)
+  - [Application Globals](https://flask-ptbr.readthedocs.io/en/latest/api.html#application-globals)
+  - [Useful Functions and Classes](https://flask-ptbr.readthedocs.io/en/latest/api.html#useful-functions-and-classes)
+  - [Message Flashing](https://flask-ptbr.readthedocs.io/en/latest/api.html#message-flashing)
+  - [JSON Support](https://flask-ptbr.readthedocs.io/en/latest/api.html#module-flask.json)
+  - [Template Rendering](https://flask-ptbr.readthedocs.io/en/latest/api.html#template-rendering)
+  - [Configuration](https://flask-ptbr.readthedocs.io/en/latest/api.html#configuration)
+  - [Extensions](https://flask-ptbr.readthedocs.io/en/latest/api.html#extensions)
+  - [Stream Helpers](https://flask-ptbr.readthedocs.io/en/latest/api.html#stream-helpers)
+  - [Useful Internals](https://flask-ptbr.readthedocs.io/en/latest/api.html#useful-internals)
+  - [Signals](https://flask-ptbr.readthedocs.io/en/latest/api.html#signals)
+  - [Class-Based Views](https://flask-ptbr.readthedocs.io/en/latest/api.html#class-based-views)
+  - [URL Route Registrations](https://flask-ptbr.readthedocs.io/en/latest/api.html#url-route-registrations)
+  - [View Function Options](https://flask-ptbr.readthedocs.io/en/latest/api.html#view-function-options)
+
+## Notas adicionais
+
+Notas de Design, informações jurídicas e changelog aqui para os interessados.
+
+- Design Decisions in Flask
+  - [The Explicit Application Object](https://flask-ptbr.readthedocs.io/en/latest/design.html#the-explicit-application-object)
+  - [The Routing System](https://flask-ptbr.readthedocs.io/en/latest/design.html#the-routing-system)
+  - [One Template Engine](https://flask-ptbr.readthedocs.io/en/latest/design.html#one-template-engine)
+  - [Micro with Dependencies](https://flask-ptbr.readthedocs.io/en/latest/design.html#micro-with-dependencies)
+  - [Thread Locals](https://flask-ptbr.readthedocs.io/en/latest/design.html#thread-locals)
+  - [What Flask is, What Flask is Not](https://flask-ptbr.readthedocs.io/en/latest/design.html#what-flask-is-what-flask-is-not)
+- HTML/XHTML FAQ
+  - [History of XHTML](https://flask-ptbr.readthedocs.io/en/latest/htmlfaq.html#history-of-xhtml)
+  - [History of HTML5](https://flask-ptbr.readthedocs.io/en/latest/htmlfaq.html#history-of-html5)
+  - [HTML versus XHTML](https://flask-ptbr.readthedocs.io/en/latest/htmlfaq.html#html-versus-xhtml)
+  - [What does “strict” mean?](https://flask-ptbr.readthedocs.io/en/latest/htmlfaq.html#what-does-strict-mean)
+  - [New technologies in HTML5](https://flask-ptbr.readthedocs.io/en/latest/htmlfaq.html#new-technologies-in-html5)
+  - [What should be used?](https://flask-ptbr.readthedocs.io/en/latest/htmlfaq.html#what-should-be-used)
+- Security Considerations
+  - [Cross-Site Scripting (XSS)](https://flask-ptbr.readthedocs.io/en/latest/security.html#cross-site-scripting-xss)
+  - [Cross-Site Request Forgery (CSRF)](https://flask-ptbr.readthedocs.io/en/latest/security.html#cross-site-request-forgery-csrf)
+  - [JSON Security](https://flask-ptbr.readthedocs.io/en/latest/security.html#json-security)
+- Unicode in Flask
+  - [Automatic Conversion](https://flask-ptbr.readthedocs.io/en/latest/unicode.html#automatic-conversion)
+  - [The Golden Rule](https://flask-ptbr.readthedocs.io/en/latest/unicode.html#the-golden-rule)
+  - [Encoding and Decoding Yourself](https://flask-ptbr.readthedocs.io/en/latest/unicode.html#encoding-and-decoding-yourself)
+  - [Configuring Editors](https://flask-ptbr.readthedocs.io/en/latest/unicode.html#configuring-editors)
+- Flask Extension Development
+  - [Anatomy of an Extension](https://flask-ptbr.readthedocs.io/en/latest/extensiondev.html#anatomy-of-an-extension)
+  - [“Hello Flaskext!”](https://flask-ptbr.readthedocs.io/en/latest/extensiondev.html#hello-flaskext)
+  - [Initializing Extensions](https://flask-ptbr.readthedocs.io/en/latest/extensiondev.html#initializing-extensions)
+  - [The Extension Code](https://flask-ptbr.readthedocs.io/en/latest/extensiondev.html#the-extension-code)
+  - [Using _app_ctx_stack](https://flask-ptbr.readthedocs.io/en/latest/extensiondev.html#using-app-ctx-stack)
+  - [Teardown Behavior](https://flask-ptbr.readthedocs.io/en/latest/extensiondev.html#teardown-behavior)
+  - [Learn from Others](https://flask-ptbr.readthedocs.io/en/latest/extensiondev.html#learn-from-others)
+  - [Approved Extensions](https://flask-ptbr.readthedocs.io/en/latest/extensiondev.html#approved-extensions)
+  - [Extension Import Transition](https://flask-ptbr.readthedocs.io/en/latest/extensiondev.html#extension-import-transition)
+- Pocoo Styleguide
+  - [General Layout](https://flask-ptbr.readthedocs.io/en/latest/styleguide.html#general-layout)
+  - [Expressions and Statements](https://flask-ptbr.readthedocs.io/en/latest/styleguide.html#expressions-and-statements)
+  - [Naming Conventions](https://flask-ptbr.readthedocs.io/en/latest/styleguide.html#naming-conventions)
+  - [Docstrings](https://flask-ptbr.readthedocs.io/en/latest/styleguide.html#docstrings)
+  - [Comments](https://flask-ptbr.readthedocs.io/en/latest/styleguide.html#comments)
+- Upgrading to Newer Releases
+  - [Version 0.10](https://flask-ptbr.readthedocs.io/en/latest/upgrading.html#version-0-10)
+  - [Version 0.9](https://flask-ptbr.readthedocs.io/en/latest/upgrading.html#version-0-9)
+  - [Version 0.8](https://flask-ptbr.readthedocs.io/en/latest/upgrading.html#version-0-8)
+  - [Version 0.7](https://flask-ptbr.readthedocs.io/en/latest/upgrading.html#version-0-7)
+  - [Version 0.6](https://flask-ptbr.readthedocs.io/en/latest/upgrading.html#version-0-6)
+  - [Version 0.5](https://flask-ptbr.readthedocs.io/en/latest/upgrading.html#version-0-5)
+  - [Version 0.4](https://flask-ptbr.readthedocs.io/en/latest/upgrading.html#version-0-4)
+  - [Version 0.3](https://flask-ptbr.readthedocs.io/en/latest/upgrading.html#version-0-3)
+- Licença
+  - [Autores](https://flask-ptbr.readthedocs.io/en/latest/license.html#autores)
+  - [Definições gerais de Licenciamento](https://flask-ptbr.readthedocs.io/en/latest/license.html#definicoes-gerais-de-licenciamento)
+  - [Licença Flask](https://flask-ptbr.readthedocs.io/en/latest/license.html#licenca-flask)
+  - [Licença Flask Artwork](https://flask-ptbr.readthedocs.io/en/latest/license.html#licenca-flask-artwork)
