@@ -1,0 +1,2 @@
+# 092_DesenvolvendoDashboardAdministrativoFlask
+Desenvolvendo um dashboard administrativo com Flask
